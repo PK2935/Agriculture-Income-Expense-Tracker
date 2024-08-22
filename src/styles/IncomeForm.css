@@ -1,0 +1,85 @@
+.income-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.income-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.income-form input,
+.income-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.income-form input[type="date"] {
+  padding: 6px;
+}
+
+.income-form button {
+  display: block;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.income-form button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.income-form .add-btn {
+  background-color: #28a745;
+}
+
+.income-form .remove-btn {
+  background-color: #dc3545;
+}
+
+.income-form .submit-btn {
+  background-color: #007bff;
+}
+
+.income-form .form-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.income-form .form-entry label {
+  margin-bottom: 10px;
+}
+
+.income-form .form-entry input,
+.income-form .form-entry select {
+  margin-bottom: 10px;
+}
+
+.income-form .form-entry button {
+  margin-top: 10px;
+}
+
+.total-income {
+  font-size: 20px;
+}

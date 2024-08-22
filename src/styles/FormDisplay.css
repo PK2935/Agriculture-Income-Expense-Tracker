@@ -1,0 +1,69 @@
+/* FormDisplay.css */
+
+.form-display-container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 700px; /* limit form width for readability */
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff; /* white background for form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+  margin-bottom: 20px; /* create space between forms and form message */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid layout */
+  grid-gap: 20px; /* spacing between form items */
+}
+
+.form-item {
+  background-color: #f5f5f5; /* light gray background for form items */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+  transition: transform 0.3s ease; /* smooth transition on hover */
+}
+
+.form-item:hover {
+  transform: translateY(-5px); /* slight upward movement on hover */
+}
+
+.form-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; /* dark gray text color */
+}
+
+.form-item p {
+  font-size: 14px;
+  color: #666; /* medium gray text color */
+}
+
+.reports-container {
+  width: 80%;
+  max-width: 800px; /* limit container width for readability */
+}
+
+.form-message {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #d4edda; /* light green background for success message */
+  color: #155724; /* dark green text color */
+}
+
+.error-message {
+  background-color: #f8d7da; /* light red background for error message */
+  color: #721c24; /* dark red text color */
+}

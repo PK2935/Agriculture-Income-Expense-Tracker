@@ -1,0 +1,74 @@
+/* Reports.css */
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning the filter container */
+}
+
+.report-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.chart-container {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Filter container styles */
+.filter-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container label {
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filter-container select,
+.filter-container input {
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.download-buttons {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.download-buttons button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.download-buttons button:hover {
+    background-color: #ddd;
+}

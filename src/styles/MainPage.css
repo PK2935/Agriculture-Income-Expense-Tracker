@@ -1,0 +1,30 @@
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(245, 245, 245, 0.8); /* Set the background color with opacity */
+  /* background-image: url('C:/Users/Prasanna/Downloads/Imp Study Docs/Project1/agriculture-income-expense-management-system/src/images/bg4.jpg'); */
+  background-position: center;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+/* .dashboard-section {
+  flex: 0 0 300px;
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.form-section {
+  flex: 1;
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  border-radius: 25px;
+}

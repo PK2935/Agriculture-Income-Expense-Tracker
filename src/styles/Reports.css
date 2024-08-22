@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Container */
+.report-container {
+  max-width: 1000px; /* Adjust for larger screens if needed */
+  margin: 0 auto;
+  padding: 40px;
+  height: 100%;
+}
+
+/* Report Header */
+.report-header {
+  display: flex;
+  justify-content: space-between; /* Align buttons to the right */
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-left: 25%;
+}
+
+.report-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0; /* Remove extra bottom margin */
+  margin-top: 10px;
+}
+
+/* Buttons */
+.report-header button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #2c3e50;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 10px; /* Add spacing between buttons */
+}
+
+.report-header button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}
+
+.report-header button.active {
+  background-color: #69a89d;
+  font-weight: bold; /* Highlight the selected button */
+}
+
+.report-header button:hover {
+  background-color: #69a89d;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .report-header h2 {
+    font-size: 24px;
+  }
+
+  .report-header button {
+    margin-right: 5px; /* Adjust spacing for smaller screens */
+  }
+}

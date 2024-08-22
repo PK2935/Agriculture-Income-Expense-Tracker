@@ -1,0 +1,93 @@
+.supply-form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.supply-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; /* Use a common font family */
+}
+
+.supply-form input[type="text"],
+.supply-form input[type="number"],
+.supply-form input[type="submit"] {
+  width: 100%; /* Full width for better alignment */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif; /* Use a common font family */
+}
+
+.supply-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif; /* Use a common font family */
+}
+
+.supply-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.supply-list {
+  margin-top: 20px;
+}
+
+.supply-list h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif; /* Use a common font family */
+}
+
+.supply-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.supply-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.supply-list span {
+  flex: 1;
+}
+
+.supply-list button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Add margin-left to create spacing between buttons */
+}
+
+.supply-list button:hover {
+  background-color: #c82333;
+}
+
+.supply-list button:first-of-type {
+  margin-left: 0; /* Remove left margin from the first button */
+}
+
+.supply-list button + button {
+  margin-left: 5px; /* Add a smaller margin between the buttons */
+}

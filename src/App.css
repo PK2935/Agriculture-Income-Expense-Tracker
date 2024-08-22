@@ -1,0 +1,95 @@
+/* App.css */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif; /* Use a common sans-serif font */
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2; /* Set a light gray background color */
+}
+
+/* Container styles */
+.container {
+  max-width: 1000px; /* Limit container width for better readability */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 20px; /* Add padding for content spacing */
+  margin-left: 450px;
+}
+
+/* Header styles */
+.main-page-header {
+  background-color: rgba(245, 245, 245, 0.8); /* Blue header background color */
+  color: black; /* White text color */
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px; /* Add margin to separate header from content */
+}
+
+
+
+/* Footer styles */
+.main-page-footer {
+  background-color: #333; /* Dark footer background color */
+  color: #fff; /* White text color */
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Stick footer to the bottom */
+  width: 100%; /* Full width footer */
+  bottom: 0; /* Align footer to the bottom of the viewport */
+}
+
+/* Navigation styles */
+.navigation-menu {
+  background-color: rgba(245, 245, 245, 0.8); /* White navigation background color */
+  padding: 10px;
+  border-radius: 25px; /* Add rounded corners to navigation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.navigation-menu ul {
+  list-style-type: none; /* Remove bullet points from list */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation button styles */
+
+
+
+/* Form styles */
+.form-display {
+  background-color: rgba(245, 245, 245, 0.8);; /* White background color for forms */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 25px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.form-message {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.success-message {
+  background-color: #28a745; /* Green background color for success message */
+}
+
+.error-message {
+  background-color: #dc3545; /* Red background color for error message */
+}
+
+/* General button styles */
+.button {
+  background-color: #007bff; /* Blue button background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
