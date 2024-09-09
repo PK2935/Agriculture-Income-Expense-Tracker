@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: rgba(245, 245, 245, 0.8);
   /* background-image: url('C:\Users\Prasanna\Downloads\Imp Study Docs\Project1\agriculture-income-expense-management-system\src\images\bg9.jpg');
   background-position: center;
@@ -20,7 +20,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  /* background-image: url('C:/Users/Prasanna/Downloads/Imp Study Docs/Project1/agriculture-income-expense-management-system/src/images/BACKGRND.jpg'); */
+  background-image: url("C:\Users\pkshi\Documents\Study notes\Projects\Internship Project\agriculture-income-expense-management-system\src\images\BACKGRND.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -90,7 +90,7 @@ button:hover {
 }
 
 button:disabled::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 16px;
   height: 16px;

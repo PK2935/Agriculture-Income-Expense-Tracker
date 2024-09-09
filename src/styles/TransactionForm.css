@@ -1,23 +1,41 @@
-.transaction-form {
-  max-width: 500px;
-  width: 110%;
+.transaction-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
   margin: 40px auto;
+}
+
+.transaction-form,
+.transaction-history {
+  flex: 1 1 45%;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.transaction-form h2 {
+.transaction-form {
+  max-width: 500px;
+}
+
+.transaction-history {
+  max-width: 450px;
+}
+
+.transaction-form h2,
+.transaction-history h3 {
   font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .transaction-form label {
   font-weight: bold;
   margin-bottom: 5px;
+  display: block;
 }
 
 .transaction-form select,
@@ -36,7 +54,7 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   cursor: pointer;
   margin-top: 10px;
@@ -46,35 +64,30 @@
   background-color: #3e8e41;
 }
 
-.transaction-form p {
-  color: red;
-  margin-top: 5px;
-}
-
-.transaction-form ul {
+.transaction-history ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.transaction-form li {
+.transaction-history li {
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  font-size: 16px;
 }
 
-.transaction-form li:last-child {
+.transaction-history li:last-child {
   border-bottom: none;
 }
 
-.transaction-form strong {
+.transaction-history strong {
   font-weight: bold;
+  font-size: 16px;
 }
 
-.transaction-form span {
+.transaction-history span {
+  display: block;
   font-size: 14px;
   color: #666;
-}
-
-.transaction-form .date {
-  font-size: 14px;
-  color: #666;
+  margin-top: 5px;
 }

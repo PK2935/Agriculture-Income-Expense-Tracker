@@ -1,6 +1,5 @@
 .expense-form {
-  max-width: 800px;
-  /* margin: 50px 100px; */
+  max-width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -37,11 +36,30 @@ select {
   border-radius: 4px;
 }
 
+.expense-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
 .expense-entry {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ddd;
   padding: 10px;
-  margin-bottom: 10px;
   border-radius: 4px;
+  width: 45%; /* 2 entries per row */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease; /* Transition added */
+}
+
+.expense-entry:hover {
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  background-color: #f1f1f1; /* Change background color */
 }
 
 .remove-button {
@@ -61,14 +79,18 @@ select {
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .add-button:hover,
 .submit-button:hover,
 .remove-button:hover {
   opacity: 0.8;
+}
+
+/* Media query for smaller screens (tablets and below) */
+@media (max-width: 768px) {
+  .expense-entry {
+    width: 100%; /* One entry per row for smaller screens */
+  }
 }

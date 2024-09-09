@@ -2,8 +2,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgba(245, 245, 245, 0.8); /* Set the background color with opacity */
-  /* background-image: url('C:/Users/Prasanna/Downloads/Imp Study Docs/Project1/agriculture-income-expense-management-system/src/images/bg4.jpg'); */
+  background-color: rgba(
+    245,
+    245,
+    245,
+    0.8
+  ); /* Set the background color with opacity */
+  background-image: url("C:\Users\pkshi\Documents\Study notes\Projects\Internship Project\agriculture-income-expense-management-system\src\images\bg4.jpg");
   background-position: center;
 }
 

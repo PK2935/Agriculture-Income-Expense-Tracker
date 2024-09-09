@@ -1,85 +1,71 @@
-.income-form {
+.entries-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-entry {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Increased border-radius for smoother look */
+  padding: 20px; /* Added more padding for a cleaner design */
+  width: 45%; /* Adjusted width to fit three entries in one row */
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Light background for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-.income-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
+.form-entry:hover {
+  transform: scale(1.05); /* Enlarge slightly on hover for a modern effect */
 }
 
-.income-form input,
-.income-form select {
-  display: block;
-  width: 100%;
-  padding: 8px;
+.form-entry input {
+  padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.income-form input[type="date"] {
-  padding: 6px;
-}
-
-.income-form button {
-  display: block;
-  padding: 10px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.income-form button:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.income-form .add-btn {
-  background-color: #28a745;
-}
-
-.income-form .remove-btn {
-  background-color: #dc3545;
-}
-
-.income-form .submit-btn {
-  background-color: #007bff;
-}
-
-.income-form .form-entry {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 5px;
   width: 100%;
-  margin-bottom: 20px;
 }
 
-.income-form .form-entry label {
-  margin-bottom: 10px;
+.remove-btn {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
 }
 
-.income-form .form-entry input,
-.income-form .form-entry select {
-  margin-bottom: 10px;
-}
-
-.income-form .form-entry button {
-  margin-top: 10px;
+.add-btn,
+.submit-btn {
+  margin: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
 }
 
 .total-income {
-  font-size: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .form-entry {
+    width: 45%; /* On smaller screens, this allows 2 entries per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-entry {
+    width: 100%; /* On very small screens, this makes each entry take up the full width (1 entry per row) */
+  }
 }

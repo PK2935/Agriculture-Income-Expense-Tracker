@@ -1,24 +1,28 @@
 /* FormDisplay.css */
 
 .form-display-container {
-  width: auto;
+  width: 100%; /* Ensure the container takes full width */
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding: 0 20px; /* Add some padding to the sides */
 }
 
 .form-container {
   width: 100%;
-  max-width: 700px; /* limit form width for readability */
+  max-width: 100%; /* Remove restriction on the max-width */
   padding: 20px;
   border-radius: 12px;
   background-color: #ffffff; /* white background for form */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
   margin-bottom: 20px; /* create space between forms and form message */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Increase the min size to fill space */
   grid-gap: 20px; /* spacing between form items */
 }
 
@@ -46,8 +50,8 @@
 }
 
 .reports-container {
-  width: 80%;
-  max-width: 800px; /* limit container width for readability */
+  width: 100%; /* Make reports container take full width */
+  max-width: 100%; /* Remove restriction on max width */
 }
 
 .form-message {

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/ExpenseForm.css';
-import { getFirestore, doc, getDoc, updateDoc } from 'firebase/firestore';
-import { firebaseApp, auth, db } from '../fb/firebase';
+import React, { useState, useEffect } from "react";
+import "../styles/ExpenseForm.css";
+import { getFirestore, doc, getDoc, updateDoc } from "firebase/firestore";
+import { firebaseApp, auth, db } from "../fb/firebase";
 
 const ExpenseForm = () => {
-  const [expenseHead, setExpenseHead] = useState('');
+  const [expenseHead, setExpenseHead] = useState("");
   const [expenses, setExpenses] = useState([]);
   const [totalExpense, setTotalExpense] = useState(0);
   const [userId, setUserId] = useState(null);
@@ -16,7 +16,7 @@ const ExpenseForm = () => {
         await loadInitialData(user.uid);
       } else {
         setUserId(null);
-        setExpenseHead('');
+        setExpenseHead("");
         setExpenses([]);
         setTotalExpense(0);
       }
@@ -27,22 +27,22 @@ const ExpenseForm = () => {
 
   const loadInitialData = async (uid) => {
     try {
-      const userRef = doc(db, 'users', uid);
+      const userRef = doc(db, "users", uid);
       const userDoc = await getDoc(userRef);
       if (userDoc.exists()) {
         const userData = userDoc.data();
         if (userData.expense) {
-          setExpenseHead(userData.expense.expenseHead || '');
+          setExpenseHead(userData.expense.expenseHead || "");
           setExpenses(userData.expense.entries || []);
           setTotalExpense(userData.expense.totalExpense || 0);
         } else {
           setExpenses([]);
-          setExpenseHead('');
+          setExpenseHead("");
           setTotalExpense(0);
         }
       }
     } catch (error) {
-      alert('Error loading initial data:', error);
+      alert("Error loading initial data:", error);
     }
   };
 
@@ -67,7 +67,7 @@ const ExpenseForm = () => {
   const handleAddExpense = () => {
     const newExpense = {
       id: expenses.length + 1,
-      type: '',
+      type: "",
       amount: 0,
       date: new Date().toISOString().slice(0, 10),
     };
@@ -79,7 +79,7 @@ const ExpenseForm = () => {
 
     if (userId) {
       try {
-        const userRef = doc(db, 'users', userId);
+        const userRef = doc(db, "users", userId);
         const userDoc = await getDoc(userRef);
         if (userDoc.exists()) {
           const userData = userDoc.data();
@@ -90,28 +90,24 @@ const ExpenseForm = () => {
             const updatedExpenses = [...userData.expense.entries];
             updatedExpenses.splice(expenseIndex, 1);
             await updateDoc(userRef, {
-              'expense.entries': updatedExpenses,
-              'expense.totalExpense': userData.expense.totalExpense - expenseToRemove.amount,
+              "expense.entries": updatedExpenses,
+              "expense.totalExpense":
+                userData.expense.totalExpense - expenseToRemove.amount,
             });
           }
         }
 
-        // Remove the expense from the local state
         const updatedExpenses = expenses.filter((_, i) => i !== index);
         setExpenses(updatedExpenses);
-
-        // Update the total expense amount
         const updatedTotalExpense = totalExpense - expenseToRemove.amount;
         setTotalExpense(updatedTotalExpense);
-        alert("Expenses Removed Successfully !")
+        alert("Expenses Removed Successfully !");
       } catch (error) {
-        alert('Error deleting expense from Firestore:', error);
+        alert("Error deleting expense from Firestore:", error);
       }
     } else {
       const updatedExpenses = expenses.filter((_, i) => i !== index);
       setExpenses(updatedExpenses);
-
-      // Update the total expense amount
       const updatedTotalExpense = totalExpense - expenses[index].amount;
       setTotalExpense(updatedTotalExpense);
     }
@@ -125,15 +121,15 @@ const ExpenseForm = () => {
   const handleSubmit = async () => {
     if (userId) {
       try {
-        const userRef = doc(db, 'users', userId);
+        const userRef = doc(db, "users", userId);
         await updateDoc(userRef, {
-          'expense.expenseHead': expenseHead,
-          'expense.totalExpense': totalExpense,
-          'expense.entries': expenses,
+          "expense.expenseHead": expenseHead,
+          "expense.totalExpense": totalExpense,
+          "expense.entries": expenses,
         });
-        alert('Expenses submitted successfully!');
+        alert("Expenses submitted successfully!");
       } catch (error) {
-        alert('Error submitting expenses:', error);
+        alert("Error submitting expenses:", error);
       }
     }
   };
@@ -144,7 +140,7 @@ const ExpenseForm = () => {
       <div className="total-expense">
         <label>Total Expense: ₹ {totalExpense}</label>
       </div>
-      <div className="expense-entries">
+      <div className="expense-entries expense-container">
         {expenses.map((expense, index) => (
           <div key={index} className="expense-entry">
             <label>Expense Type:</label>
